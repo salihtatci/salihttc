@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salih Tatcı — Geomatics &amp; Electrical Engineer</title>
+  <meta name="description" content="Salih Tatcı — MSc student in Geomatics Engineering and BSc double-major student in Electrical Engineering at Istanbul Technical University. GIS, remote sensing, InSAR, power electronics, signal processing and photogrammetry." />
+  <meta name="keywords" content="Salih Tatci, Geomatics Engineer, GIS, Remote Sensing, InSAR, StaMPS, PyGMTSAR, Power Electronics, Signal Processing, Photogrammetry, ITU" />
+
+  <!-- Dil alternatifleri -->
+  <link rel="alternate" hreflang="tr" href="index.html" />
+  <link rel="alternate" hreflang="en" href="index-en.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Salih Tatcı — Geomatics &amp; Electrical Engineer" />
+  <meta property="og:description" content="Turning spatial data and signals into measurable engineering solutions." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Apply theme before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("tema");
+        if (!t) {
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#hero" class="brand" aria-label="Salih Tatcı — home">
+          <span class="brand__mark">ST</span>
+          <span class="brand__name">Salih Tatcı</span>
+        </a>
+
+        <nav class="nav__menu" aria-label="Main menu">
+          <ul class="nav__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Résumé</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a class="nav__cta" href="Salih-Tatci-CV.pdf" download>
+            Download CV
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+          </a>
+        </nav>
+
+        <div class="nav__utils">
+          <a class="nav__lang" href="index.html" hreflang="tr" aria-label="Türkçe'ye geç">TR</a>
+
+          <button class="nav__theme" id="themeToggle" aria-label="Toggle dark / light theme">
+            <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+            <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+          </button>
+
+          <button class="nav__toggle" id="navToggle" aria-label="Open / close menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero__canvas" aria-hidden="true">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <g class="hero__grid hero__layer" data-depth="0.04">
+          <line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/>
+          <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/>
+          <line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="600" x2="1200" y2="600"/>
+          <line x1="0" y1="700" x2="1200" y2="700"/>
+          <line x1="150" y1="0" x2="150" y2="800"/><line x1="300" y1="0" x2="300" y2="800"/>
+          <line x1="450" y1="0" x2="450" y2="800"/><line x1="600" y1="0" x2="600" y2="800"/>
+          <line x1="750" y1="0" x2="750" y2="800"/><line x1="900" y1="0" x2="900" y2="800"/>
+          <line x1="1050" y1="0" x2="1050" y2="800"/>
+        </g>
+        <g class="hero__layer" data-depth="0.09">
+          <path class="hero__contour" d="M-50,560 C200,500 340,640 560,580 C780,520 940,650 1260,560"/>
+          <path class="hero__contour" d="M-50,600 C220,540 360,690 580,620 C800,560 960,690 1260,600"/>
+          <path class="hero__contour" d="M-50,640 C240,585 380,730 600,665 C820,600 980,730 1260,645"/>
+          <path class="hero__contour" d="M-50,205 C240,150 400,270 640,215 C880,160 1020,285 1260,220"/>
+          <path class="hero__contour" d="M-50,245 C260,190 420,315 660,255 C900,200 1040,325 1260,260"/>
+        </g>
+        <g class="hero__layer" data-depth="0.14">
+          <circle class="hero__station" cx="560" cy="580" r="3"/>
+          <circle class="hero__station-ring" cx="560" cy="580" r="9"/>
+          <circle class="hero__station" cx="640" cy="215" r="3"/>
+          <circle class="hero__station-ring" cx="640" cy="215" r="9"/>
+        </g>
+        <line class="hero__sweep" x1="0" y1="0" x2="0" y2="800"/>
+      </svg>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow mono" data-reveal>
+            <span class="dot"></span> ITU · GEOMATICS × ELECTRICAL
+          </p>
+
+          <h1 data-reveal style="--reveal-delay:60ms">
+            Salih <span class="accent">Tatcı</span>
+          </h1>
+
+          <p class="hero__tag" data-reveal style="--reveal-delay:140ms">
+            Where the map measures, the signal resolves.
+          </p>
+
+          <p class="hero__lead" data-reveal style="--reveal-delay:220ms">
+            I am an MSc student in Geomatics Engineering and a BSc student in Electrical
+            Engineering at Istanbul Technical University. I combine remote sensing,
+            InSAR-based deformation analysis and photogrammetry with a foundation in
+            power electronics and signal processing to turn raw data into measurable
+            engineering solutions.
+          </p>
+
+          <div class="hero__actions" data-reveal style="--reveal-delay:300ms">
+            <a class="btn btn--solid" href="#projects">
+              View Projects
+              <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="Salih-Tatci-CV.pdf" download>Download CV</a>
+          </div>
+        </div>
+
+        <!-- portrait -->
+        <figure class="hero__portrait" data-reveal style="--reveal-delay:200ms">
+          <picture>
+            <source srcset="salih.webp" type="image/webp" />
+            <img src="salih.jpg" alt="Portrait of Salih Tatcı" width="800" height="800" fetchpriority="high" decoding="async" />
+          </picture>
+        </figure>
+      </div>
+
+      <dl class="hero__readout" data-reveal style="--reveal-delay:380ms">
+        <div>
+          <dt>MSc</dt>
+          <dd>Geomatics Eng. (Thesis)</dd>
+        </div>
+        <div>
+          <dt>BSc</dt>
+          <dd>Electrical Eng. (Double Major)</dd>
+        </div>
+        <div>
+          <dt>Focus</dt>
+          <dd>RS · InSAR · Signals</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Open to collaboration</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>SCROLL</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 01</span><span class="rule"></span> ABOUT</span>
+        <h2 class="section__title">An engineer working at the intersection of two disciplines.</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__body" data-reveal="left">
+          <p>
+            Hello, I am <strong>Salih</strong>. After graduating from Refik Arslan Öztürk
+            Science High School in Bilecik in 2019 and preparing for another year, I earned
+            a place in the Geomatics Engineering programme at Istanbul Technical University.
+          </p>
+          <p>
+            In June 2025 I graduated from Geomatics Engineering as <strong>second in my
+            department</strong>. In September 2023 I joined the <strong>Electrical Engineering</strong>
+            programme through the double-major scheme, and in July 2025 I was admitted to the
+            <strong>MSc programme with thesis</strong> in Geomatics Engineering. I am currently
+            studying both at once at ITU.
+          </p>
+          <p>
+            My work focuses on remote sensing, InSAR-based deformation detection and
+            photogrammetry. My background in power electronics and signal processing directly
+            shapes how I process and interpret data. Through my internships I have worked both
+            in the field on surveying and cadastral applications, and in the lab on InSAR
+            processing and data preparation for deep learning.
+          </p>
+          <a class="btn btn--ghost" href="Salih-Tatci-CV.pdf" download>
+            Download Résumé
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+
+        <aside class="spec" data-reveal="right" style="--reveal-delay:120ms">
+          <div class="spec__bar">
+            <span>PROFILE / RECORD</span>
+            <span class="live">ACTIVE</span>
+          </div>
+          <dl>
+            <div class="spec__row"><dt>Name</dt><dd>Salih Tatcı</dd></div>
+            <div class="spec__row"><dt>University</dt><dd>ITU</dd></div>
+            <div class="spec__row"><dt>MSc</dt><dd>Geomatics Eng. (Thesis)</dd></div>
+            <div class="spec__row"><dt>BSc</dt><dd>Electrical Eng. (Double Major)</dd></div>
+            <div class="spec__row"><dt>GPA</dt><dd>3.58 / 4.00</dd></div>
+            <div class="spec__row"><dt>Rank</dt><dd>2nd in Department</dd></div>
+            <div class="spec__row"><dt>Languages</dt><dd>English C1 · German A2</dd></div>
+            <div class="spec__row"><dt>Location</dt><dd>Istanbul, TR</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- signal divider -->
+  <div class="container" aria-hidden="true">
+    <svg class="waveform" viewBox="0 0 1200 48" preserveAspectRatio="none">
+      <path d="M0,24 H420 l14,-16 l16,32 l16,-40 l16,48 l16,-24 H520 q40,0 60,-14 q30,-20 60,0 q30,20 70,14 H760 l16,-18 l16,36 l16,-40 l16,44 l14,-18 H1200"/>
+    </svg>
+  </div>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section section--panel" id="skills">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 02</span><span class="rule"></span> SKILLS</span>
+        <h2 class="section__title">Focus areas, tools and certifications.</h2>
+        <p class="section__desc">From collecting and processing spatial data to analysing and interpreting signals, I work end to end.</p>
+      </div>
+
+      <div class="domains">
+        <article class="domain" data-reveal style="--reveal-delay:0ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3Z"/><path d="M9 3v15M15 6v15"/></svg>
+          </div>
+          <h3>Geographic Information Systems</h3>
+          <p>GIS workflows for spatial data modelling, layer analysis and map production.</p>
+        </article>
+
+        <article class="domain" data-reveal style="--reveal-delay:80ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+          </div>
+          <h3>Remote Sensing</h3>
+          <p>Surface analysis with optical and SAR data; deformation detection via InSAR and interferometry.</p>
+        </article>
+
+        <article class="domain" data-reveal style="--reveal-delay:160ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+          </div>
+          <h3>Power Electronics</h3>
+          <p>Energy conversion and charging systems, grounded in the electrical engineering double major.</p>
+        </article>
+
+        <article class="domain" data-reveal style="--reveal-delay:240ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l2-7 4 18 3-11 2 5h6"/></svg>
+          </div>
+          <h3>Signal Processing</h3>
+          <p>Filtering, transforming and interpreting measurement data through signal analysis.</p>
+        </article>
+
+        <article class="domain" data-reveal style="--reveal-delay:320ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 12 3l9 4-9 4-9-4Z"/><path d="M3 7v6l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+          </div>
+          <h3>Photogrammetry</h3>
+          <p>3D model generation from imagery; city modelling at LoD levels.</p>
+        </article>
+      </div>
+
+      <div class="skills-split">
+        <div class="skills-block" data-reveal="left">
+          <h4>Tools &amp; Software</h4>
+          <div class="chips">
+            <span class="chip"><span class="tick"></span>Python</span>
+            <span class="chip"><span class="tick"></span>SQL</span>
+            <span class="chip"><span class="tick"></span>QGIS</span>
+            <span class="chip"><span class="tick"></span>ArcGIS</span>
+            <span class="chip"><span class="tick"></span>NetCAD</span>
+            <span class="chip"><span class="tick"></span>AutoCAD</span>
+            <span class="chip"><span class="tick"></span>Agisoft Metashape</span>
+            <span class="chip"><span class="tick"></span>ESA SNAP</span>
+            <span class="chip"><span class="tick"></span>StaMPS</span>
+            <span class="chip"><span class="tick"></span>Snap2StaMPS</span>
+            <span class="chip"><span class="tick"></span>PyGMTSAR</span>
+            <span class="chip"><span class="tick"></span>MS Office</span>
+          </div>
+        </div>
+
+        <div class="skills-block" data-reveal="right" style="--reveal-delay:120ms">
+          <h4>Languages &amp; Certifications</h4>
+          <div class="lang-list">
+            <div class="lang">
+              <span class="lang__name">English</span>
+              <span class="lang__level">C1</span>
+            </div>
+            <div class="lang">
+              <span class="lang__name">German</span>
+              <span class="lang__level">A2</span>
+            </div>
+            <div class="lang">
+              <span class="lang__name">UAV Pilot Licence</span>
+              <span class="lang__level">UAV-0 / 1</span>
+            </div>
+            <div class="lang">
+              <span class="lang__name">Driving Licence</span>
+              <span class="lang__level">B · M · F</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RÉSUMÉ: EDUCATION + EXPERIENCE ================= -->
+  <section class="section" id="resume">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 03</span><span class="rule"></span> RÉSUMÉ</span>
+        <h2 class="section__title">Education and experience.</h2>
+      </div>
+
+      <div class="cv__grid">
+        <!-- EDUCATION -->
+        <div class="cv__col" data-reveal="left">
+          <h3 class="cv__label">EDUCATION</h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">2025 — PRESENT</p>
+              <h3>Geomatics Engineering — MSc with Thesis</h3>
+              <p class="tl-item__org">Istanbul Technical University</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">2023 — PRESENT</p>
+              <h3>Electrical Engineering — Double Major</h3>
+              <p class="tl-item__org">Istanbul Technical University</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">2020 — 2025</p>
+              <h3>Geomatics Engineering — BSc</h3>
+              <p class="tl-item__org">Istanbul Technical University</p>
+              <p>Graduated with a GPA of 3.58 / 4.00 — second in the department.</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">2015 — 2019</p>
+              <h3>Refik Arslan Öztürk Science High School</h3>
+              <p class="tl-item__org">Bilecik</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="cv__col" data-reveal="right" style="--reveal-delay:120ms">
+          <h3 class="cv__label">EXPERIENCE</h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">JUL 2025 — AUG 2025</p>
+              <h3>Intern</h3>
+              <p class="tl-item__org">Enerjisa Spark</p>
+              <p>Work on EV charging units mounted on lighting poles and portable charging units.</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">JUN 2025 — JUL 2025</p>
+              <h3>Volunteer Intern</h3>
+              <p class="tl-item__org">Smart Cities &amp; Partners</p>
+              <p>Data processing and labelling with StaMPS, Snap2StaMPS and AnyLabeling.</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">JUL 2024 — AUG 2024</p>
+              <h3>Intern</h3>
+              <p class="tl-item__org">ITU Center for Satellite Communications and Remote Sensing</p>
+              <p>Interferometry, deformation detection and data preparation for deep learning.</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">AUG 2022 — SEP 2022</p>
+              <h3>Intern</h3>
+              <p class="tl-item__org">Zirve Surveying &amp; Cadastre Office</p>
+              <p>Parcelling, field surveying, land consolidation and subdivision applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section section--panel" id="projects">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 04</span><span class="rule"></span> PROJECTS</span>
+        <h2 class="section__title">Selected work.</h2>
+        <p class="section__desc">Feel free to get in touch for more detail on any of these projects.</p>
+      </div>
+
+      <div class="projects__grid">
+        <article class="project" data-reveal style="--reveal-delay:0ms">
+          <span class="project__idx">P.01</span>
+          <h3>ITU Ayazağa 3D City Model</h3>
+          <p>Creating an LoD1 3D city model of the ITU Ayazağa Campus and publishing it on the web.</p>
+          <div class="project__tags"><span>Photogrammetry</span><span>3D Modelling</span><span>Web GIS</span></div>
+          <a class="project__link" href="https://sites.google.com/view/itu3dkampusmodeliekip5/ana-sayfa" target="_blank" rel="noopener">
+            Open Project
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="project" data-reveal style="--reveal-delay:80ms">
+          <span class="project__idx">P.02</span>
+          <h3>Deformation Detection with Optical &amp; SAR</h3>
+          <p>Determining surface deformation through the combined use of optical and SAR remote sensing data.</p>
+          <div class="project__tags"><span>Remote Sensing</span><span>InSAR</span><span>StaMPS</span></div>
+          <span class="project__link project__link--muted">Contact for details</span>
+        </article>
+
+        <article class="project" data-reveal style="--reveal-delay:160ms">
+          <span class="project__idx">P.03</span>
+          <h3>Geomatics Project — Basic Surveying</h3>
+          <p>Fundamental surveying and computation; detail surveys using GPS/GNSS techniques alongside terrestrial methods.</p>
+          <div class="project__tags"><span>GNSS</span><span>Terrestrial Survey</span><span>Geodesy</span></div>
+          <span class="project__link project__link--muted">Contact for details</span>
+        </article>
+
+        <article class="project" data-reveal style="--reveal-delay:240ms">
+          <span class="project__idx">P.04</span>
+          <h3>Geomatics Project — Advanced Analysis</h3>
+          <p>A comprehensive project applying geodetic, photogrammetric and remote sensing methods together.</p>
+          <div class="project__tags"><span>Geodesy</span><span>Photogrammetry</span><span>RS</span></div>
+          <span class="project__link project__link--muted">Contact for details</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACHIEVEMENTS ================= -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 05</span><span class="rule"></span> ACHIEVEMENTS</span>
+        <h2 class="section__title">Honours, publications and memberships.</h2>
+      </div>
+
+      <div class="awards">
+        <div class="award" data-reveal>
+          <span class="award__rank">2025</span>
+          <div class="award__body">
+            <h3>TUFUAB 2025 — National Conference Paper</h3>
+            <p>Paper presented at the symposium of the Turkish National Union of Photogrammetry and Remote Sensing.</p>
+          </div>
+          <span class="award__badge" aria-hidden="true">📄</span>
+        </div>
+
+        <div class="award" data-reveal style="--reveal-delay:80ms">
+          <span class="award__rank">2ND</span>
+          <div class="award__body">
+            <h3>Second in Geomatics Engineering, ITU</h3>
+            <p>Departmental ranking in the 252nd anniversary graduating class with a GPA of 3.58 / 4.00.</p>
+          </div>
+          <span class="award__badge" aria-hidden="true">🥈</span>
+        </div>
+
+        <div class="award" data-reveal style="--reveal-delay:160ms">
+          <span class="award__rank">3RD</span>
+          <div class="award__body">
+            <h3>Third Place — GIS Projects</h3>
+            <p>Ranking in the Geographic Information Systems project competition.</p>
+          </div>
+          <span class="award__badge" aria-hidden="true">🥉</span>
+        </div>
+      </div>
+
+      <div class="orgs" data-reveal style="--reveal-delay:120ms">
+        <h3 class="cv__label">MEMBERSHIPS &amp; ORGANISATIONS</h3>
+        <div class="orgs__grid">
+          <div class="org">
+            <h4>ITU Geodesy &amp; Photogrammetry Club</h4>
+            <p>Board Member · Technical Trip · 2023–2024</p>
+          </div>
+          <div class="org">
+            <h4>ISPRS</h4>
+            <p>International Society for Photogrammetry and Remote Sensing</p>
+          </div>
+          <div class="org">
+            <h4>IAG</h4>
+            <p>International Association of Geodesy</p>
+          </div>
+          <div class="org">
+            <h4>TMMOB HKMO</h4>
+            <p>Chamber of Survey and Cadastre Engineers of Türkiye</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section section--panel" id="contact">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 06</span><span class="rule"></span> CONTACT</span>
+      </div>
+
+      <div class="contact__grid">
+        <div data-reveal="left">
+          <p class="contact__lead">A project, a collaboration or just an idea — I am happy to talk.</p>
+
+          <a class="contact__mail" href="mailto:salihtatci@gmail.com">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            salihtatci@gmail.com
+          </a>
+
+          <div class="contact__socials">
+            <a href="https://www.linkedin.com/in/salih-tatc%C4%B1-940994207/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.75 1.86-2.75 3.78V24h-4V8Z"/></svg>
+            </a>
+            <a href="https://github.com/salihtatci" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7 0-.7 0-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/salihtatci/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://x.com/TatciSalih" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-7-6.2 7H1.7l8.1-9.3L1 2h7l4.9 6.5L18.9 2Zm-2.4 18h1.9L7.6 4H5.6l10.9 16Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- location card: ITU Ayazağa — live satellite imagery -->
+        <div class="geocard" data-reveal="right" style="--reveal-delay:120ms">
+          <div class="geocard__map">
+            <iframe
+              class="geocard__frame"
+              src="https://maps.google.com/maps?q=41.104692,29.019366&t=k&z=16&output=embed"
+              title="ITU Ayazağa Campus — satellite view"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+            <span class="geocard__reticle" aria-hidden="true"></span>
+          </div>
+          <div class="geocard__foot">
+            <span>41.1047°N&nbsp;&nbsp;29.0194°E</span>
+            <a href="https://www.google.com/maps/@41.104692,29.019366,16z/data=!3m1!1e3" target="_blank" rel="noopener">Open larger map ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__brand">Salih Tatcı</span>
+        <span class="footer__meta">© 2025 · Geomatics &amp; Electrical Engineer · Istanbul</span>
+        <a class="footer__top" href="#hero">
+          BACK TO TOP
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V3M5 10l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salih Tatcı — Geomatik ve Elektrik Mühendisi</title>
+  <meta name="description" content="Salih Tatcı — İTÜ Geomatik Mühendisliği yüksek lisans ve Elektrik Mühendisliği çift anadal öğrencisi. CBS, uzaktan algılama, InSAR, güç elektroniği, sinyal işleme ve fotogrametri." />
+  <meta name="keywords" content="Salih Tatcı, Geomatik Mühendisi, CBS, GIS, Uzaktan Algılama, InSAR, StaMPS, PyGMTSAR, Güç Elektroniği, Sinyal İşleme, Fotogrametri, İTÜ" />
+
+  <!-- Dil alternatifleri -->
+  <link rel="alternate" hreflang="tr" href="index.html" />
+  <link rel="alternate" hreflang="en" href="index-en.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Salih Tatcı — Geomatik ve Elektrik Mühendisi" />
+  <meta property="og:description" content="Coğrafi veriyi ve sinyali mühendislik çözümlerine dönüştürüyorum." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fontlar -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Temayı sayfa çizilmeden önce uygula (yanıp sönmeyi önler) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("tema");
+        if (!t) {
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ================= NAVİGASYON ================= -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#hero" class="brand" aria-label="Salih Tatcı — ana sayfa">
+          <span class="brand__mark">ST</span>
+          <span class="brand__name">Salih Tatcı</span>
+        </a>
+
+        <nav class="nav__menu" aria-label="Ana menü">
+          <ul class="nav__links">
+            <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#yetenekler">Yetenekler</a></li>
+            <li><a href="#ozgecmis">Özgeçmiş</a></li>
+            <li><a href="#projeler">Projeler</a></li>
+            <li><a href="#basarilar">Başarılar</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+          </ul>
+          <a class="nav__cta" href="Salih-Tatci-CV.pdf" download>
+            CV İndir
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+          </a>
+        </nav>
+
+        <div class="nav__utils">
+          <a class="nav__lang" href="index-en.html" hreflang="en" aria-label="Switch to English">EN</a>
+
+          <button class="nav__theme" id="themeToggle" aria-label="Koyu / açık temayı değiştir">
+            <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+            <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+          </button>
+
+          <button class="nav__toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <!-- İMZA ÖĞE: topografya eğrileri + koordinat gridi + sensör tarama -->
+    <div class="hero__canvas" aria-hidden="true">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <g class="hero__grid hero__layer" data-depth="0.04">
+          <line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/>
+          <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/>
+          <line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="600" x2="1200" y2="600"/>
+          <line x1="0" y1="700" x2="1200" y2="700"/>
+          <line x1="150" y1="0" x2="150" y2="800"/><line x1="300" y1="0" x2="300" y2="800"/>
+          <line x1="450" y1="0" x2="450" y2="800"/><line x1="600" y1="0" x2="600" y2="800"/>
+          <line x1="750" y1="0" x2="750" y2="800"/><line x1="900" y1="0" x2="900" y2="800"/>
+          <line x1="1050" y1="0" x2="1050" y2="800"/>
+        </g>
+        <g class="hero__layer" data-depth="0.09">
+          <path class="hero__contour" d="M-50,560 C200,500 340,640 560,580 C780,520 940,650 1260,560"/>
+          <path class="hero__contour" d="M-50,600 C220,540 360,690 580,620 C800,560 960,690 1260,600"/>
+          <path class="hero__contour" d="M-50,640 C240,585 380,730 600,665 C820,600 980,730 1260,645"/>
+          <path class="hero__contour" d="M-50,205 C240,150 400,270 640,215 C880,160 1020,285 1260,220"/>
+          <path class="hero__contour" d="M-50,245 C260,190 420,315 660,255 C900,200 1040,325 1260,260"/>
+        </g>
+        <g class="hero__layer" data-depth="0.14">
+          <circle class="hero__station" cx="560" cy="580" r="3"/>
+          <circle class="hero__station-ring" cx="560" cy="580" r="9"/>
+          <circle class="hero__station" cx="640" cy="215" r="3"/>
+          <circle class="hero__station-ring" cx="640" cy="215" r="9"/>
+        </g>
+        <line class="hero__sweep" x1="0" y1="0" x2="0" y2="800"/>
+      </svg>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow mono" data-reveal>
+            <span class="dot"></span> İTÜ · GEOMATİK × ELEKTRİK
+          </p>
+
+          <h1 data-reveal style="--reveal-delay:60ms">
+            Salih <span class="accent">Tatcı</span>
+          </h1>
+
+          <p class="hero__tag" data-reveal style="--reveal-delay:140ms">
+            Haritanın ölçtüğü yerde, sinyalin çözdüğü an.
+          </p>
+
+          <p class="hero__lead" data-reveal style="--reveal-delay:220ms">
+            İstanbul Teknik Üniversitesi'nde Geomatik Mühendisliği tezli yüksek lisans ve
+            Elektrik Mühendisliği lisans öğrencisiyim. Uzaktan algılama, InSAR tabanlı
+            deformasyon analizi ve fotogrametriyi; güç elektroniği ile sinyal işleme
+            temelimle birleştirerek veriden ölçülebilir mühendislik çözümleri üretiyorum.
+          </p>
+
+          <div class="hero__actions" data-reveal style="--reveal-delay:300ms">
+            <a class="btn btn--solid" href="#projeler">
+              Projeleri İncele
+              <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="Salih-Tatci-CV.pdf" download>CV İndir</a>
+          </div>
+        </div>
+
+        <!-- portre -->
+        <figure class="hero__portrait" data-reveal style="--reveal-delay:200ms">
+          <picture>
+            <source srcset="salih.webp" type="image/webp" />
+            <img src="salih.jpg" alt="Salih Tatcı portresi" width="800" height="800" fetchpriority="high" decoding="async" />
+          </picture>
+        </figure>
+      </div>
+
+      <dl class="hero__readout" data-reveal style="--reveal-delay:380ms">
+        <div>
+          <dt>Yüksek Lisans</dt>
+          <dd>Geomatik Müh. (Tezli)</dd>
+        </div>
+        <div>
+          <dt>Lisans</dt>
+          <dd>Elektrik Müh. (ÇAP)</dd>
+        </div>
+        <div>
+          <dt>Odak</dt>
+          <dd>UA · InSAR · Sinyal</dd>
+        </div>
+        <div>
+          <dt>Durum</dt>
+          <dd>İş birliğine açık</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>KAYDIR</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- ================= HAKKIMDA ================= -->
+  <section class="section" id="hakkimda">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 01</span><span class="rule"></span> HAKKIMDA</span>
+        <h2 class="section__title">İki disiplinin kesişiminde çalışan bir mühendis.</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__body" data-reveal="left">
+          <p>
+            Merhaba, ben <strong>Salih</strong>. 2019'da Bilecik Refik Arslan Öztürk Fen Lisesi'nden
+            mezun oldum ve bir yıl daha hazırlanarak İstanbul Teknik Üniversitesi
+            Geomatik Mühendisliği lisans programına girmeye hak kazandım.
+          </p>
+          <p>
+            Haziran 2025'te <strong>bölüm ikincisi</strong> olarak Geomatik Mühendisliği'nden mezun oldum.
+            Eylül 2023'te çift anadal programıyla <strong>Elektrik Mühendisliği</strong> bölümüne katıldım;
+            Temmuz 2025'te ise Geomatik Mühendisliği <strong>tezli yüksek lisans</strong> programını kazandım.
+            Şu anda İTÜ'de aynı anda Elektrik Mühendisliği lisans ve Geomatik Mühendisliği
+            yüksek lisans öğrencisiyim.
+          </p>
+          <p>
+            Çalışmalarım uzaktan algılama, InSAR tabanlı deformasyon belirleme ve fotogrametri
+            üzerine yoğunlaşıyor. Elektrik tarafındaki güç elektroniği ve sinyal işleme temelim,
+            veriyi işleme ve yorumlama biçimimi doğrudan besliyor. Stajlarımda hem sahada
+            ölçme ve kadastro uygulamalarında hem de laboratuvarda InSAR ve derin öğrenme
+            veri hazırlığında yer aldım.
+          </p>
+          <a class="btn btn--ghost" href="Salih-Tatci-CV.pdf" download>
+            Özgeçmişi İndir
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+
+        <aside class="spec" data-reveal="right" style="--reveal-delay:120ms">
+          <div class="spec__bar">
+            <span>PROFİL / KAYIT</span>
+            <span class="live">AKTİF</span>
+          </div>
+          <dl>
+            <div class="spec__row"><dt>İsim</dt><dd>Salih Tatcı</dd></div>
+            <div class="spec__row"><dt>Üniversite</dt><dd>İTÜ</dd></div>
+            <div class="spec__row"><dt>Yüksek lisans</dt><dd>Geomatik Müh. (Tezli)</dd></div>
+            <div class="spec__row"><dt>Lisans</dt><dd>Elektrik Müh. (ÇAP)</dd></div>
+            <div class="spec__row"><dt>Lisans notu</dt><dd>3.58 / 4.00</dd></div>
+            <div class="spec__row"><dt>Derece</dt><dd>Bölüm İkincisi</dd></div>
+            <div class="spec__row"><dt>Diller</dt><dd>İngilizce C1 · Almanca A2</dd></div>
+            <div class="spec__row"><dt>Konum</dt><dd>İstanbul, TR</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- sinyal ayırıcı -->
+  <div class="container" aria-hidden="true">
+    <svg class="waveform" viewBox="0 0 1200 48" preserveAspectRatio="none">
+      <path d="M0,24 H420 l14,-16 l16,32 l16,-40 l16,48 l16,-24 H520 q40,0 60,-14 q30,-20 60,0 q30,20 70,14 H760 l16,-18 l16,36 l16,-40 l16,44 l14,-18 H1200"/>
+    </svg>
+  </div>
+
+  <!-- ================= YETENEKLER ================= -->
+  <section class="section section--panel" id="yetenekler">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 02</span><span class="rule"></span> YETENEKLER</span>
+        <h2 class="section__title">Odak alanları, araçlar ve belgeler.</h2>
+        <p class="section__desc">Coğrafi veriyi toplamaktan işlemeye, sinyali analiz etmekten yorumlamaya kadar uçtan uca çalışıyorum.</p>
+      </div>
+
+      <!-- Odak alanları -->
+      <div class="domains">
+        <article class="domain" data-reveal style="--reveal-delay:0ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3Z"/><path d="M9 3v15M15 6v15"/></svg>
+          </div>
+          <h3>Coğrafi Bilgi Sistemleri</h3>
+          <p>Konumsal veri modelleme, katman analizi ve harita üretimi için CBS iş akışları.</p>
+        </article>
+
+        <article class="domain" data-reveal style="--reveal-delay:80ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+          </div>
+          <h3>Uzaktan Algılama</h3>
+          <p>Optik ve SAR verilerle yüzey analizi; InSAR ve interferometri ile deformasyon belirleme.</p>
+        </article>
+
+        <article class="domain" data-reveal style="--reveal-delay:160ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+          </div>
+          <h3>Güç Elektroniği</h3>
+          <p>Enerji dönüşümü ve şarj sistemleri; elektrik mühendisliği çift anadal temeli.</p>
+        </article>
+
+        <article class="domain" data-reveal style="--reveal-delay:240ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l2-7 4 18 3-11 2 5h6"/></svg>
+          </div>
+          <h3>Sinyal İşleme</h3>
+          <p>Ölçüm verisinin filtrelenmesi, dönüşümü ve yorumlanması için sinyal analizi.</p>
+        </article>
+
+        <article class="domain" data-reveal style="--reveal-delay:320ms">
+          <div class="domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 12 3l9 4-9 4-9-4Z"/><path d="M3 7v6l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+          </div>
+          <h3>Fotogrametri</h3>
+          <p>Görüntülerden 3B model üretimi; LoD seviyelerinde şehir modelleme.</p>
+        </article>
+      </div>
+
+      <!-- Araçlar & diller -->
+      <div class="skills-split">
+        <div class="skills-block" data-reveal="left">
+          <h4>Araçlar &amp; Yazılım</h4>
+          <div class="chips">
+            <span class="chip"><span class="tick"></span>Python</span>
+            <span class="chip"><span class="tick"></span>SQL</span>
+            <span class="chip"><span class="tick"></span>QGIS</span>
+            <span class="chip"><span class="tick"></span>ArcGIS</span>
+            <span class="chip"><span class="tick"></span>NetCAD</span>
+            <span class="chip"><span class="tick"></span>AutoCAD</span>
+            <span class="chip"><span class="tick"></span>Agisoft Metashape</span>
+            <span class="chip"><span class="tick"></span>ESA SNAP</span>
+            <span class="chip"><span class="tick"></span>StaMPS</span>
+            <span class="chip"><span class="tick"></span>Snap2StaMPS</span>
+            <span class="chip"><span class="tick"></span>PyGMTSAR</span>
+            <span class="chip"><span class="tick"></span>MS Office</span>
+          </div>
+        </div>
+
+        <div class="skills-block" data-reveal="right" style="--reveal-delay:120ms">
+          <h4>Diller &amp; Belgeler</h4>
+          <div class="lang-list">
+            <div class="lang">
+              <span class="lang__name">İngilizce</span>
+              <span class="lang__level">C1</span>
+            </div>
+            <div class="lang">
+              <span class="lang__name">Almanca</span>
+              <span class="lang__level">A2</span>
+            </div>
+            <div class="lang">
+              <span class="lang__name">İHA Pilot Belgesi</span>
+              <span class="lang__level">IHA-0 / 1</span>
+            </div>
+            <div class="lang">
+              <span class="lang__name">Sürücü Belgesi</span>
+              <span class="lang__level">B · M · F</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ÖZGEÇMİŞ: EĞİTİM + DENEYİM ================= -->
+  <section class="section" id="ozgecmis">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 03</span><span class="rule"></span> ÖZGEÇMİŞ</span>
+        <h2 class="section__title">Eğitim ve deneyim.</h2>
+      </div>
+
+      <div class="cv__grid">
+        <!-- EĞİTİM -->
+        <div class="cv__col" data-reveal="left">
+          <h3 class="cv__label">EĞİTİM</h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">2025 — DEVAM EDİYOR</p>
+              <h3>Geomatik Mühendisliği — Tezli Yüksek Lisans</h3>
+              <p class="tl-item__org">İstanbul Teknik Üniversitesi</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">2023 — DEVAM EDİYOR</p>
+              <h3>Elektrik Mühendisliği — Çift Anadal</h3>
+              <p class="tl-item__org">İstanbul Teknik Üniversitesi</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">2020 — 2025</p>
+              <h3>Geomatik Mühendisliği — Lisans</h3>
+              <p class="tl-item__org">İstanbul Teknik Üniversitesi</p>
+              <p>Mezuniyet notu 3.58 / 4.00 — bölüm ikincisi.</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">2015 — 2019</p>
+              <h3>Refik Arslan Öztürk Fen Lisesi</h3>
+              <p class="tl-item__org">Bilecik</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DENEYİM -->
+        <div class="cv__col" data-reveal="right" style="--reveal-delay:120ms">
+          <h3 class="cv__label">DENEYİM</h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">TEM 2025 — AĞU 2025</p>
+              <h3>Stajyer</h3>
+              <p class="tl-item__org">Enerjisa Spark</p>
+              <p>Aydınlatma direklerinde e-şarj ünitesi ve taşınabilir e-şarj ünitesi çalışmaları.</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">HAZ 2025 — TEM 2025</p>
+              <h3>Gönüllü Stajyer</h3>
+              <p class="tl-item__org">Smart Cities &amp; Partners</p>
+              <p>StaMPS, Snap2StaMPS ve AnyLabeling ile veri işleme ve etiketleme çalışmaları.</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">TEM 2024 — AĞU 2024</p>
+              <h3>Stajyer</h3>
+              <p class="tl-item__org">İTÜ Uydu Haberleşme ve Uzaktan Algılama Merkezi</p>
+              <p>İnterferometri, deformasyon belirleme ve derin öğrenme için veri hazırlığı.</p>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-item__node" aria-hidden="true"></span>
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <p class="tl-item__meta">AĞU 2022 — EYL 2022</p>
+              <h3>Stajyer</h3>
+              <p class="tl-item__org">Zirve Harita Kadastro Bürosu</p>
+              <p>Parselizasyon, ölçme çalışmaları, tevhit ve ifraz uygulamaları.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJELER ================= -->
+  <section class="section section--panel" id="projeler">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 04</span><span class="rule"></span> PROJELER</span>
+        <h2 class="section__title">Seçilmiş çalışmalar.</h2>
+        <p class="section__desc">Projeler hakkında detaylı bilgi için benimle iletişime geçebilirsiniz.</p>
+      </div>
+
+      <div class="projects__grid">
+        <article class="project" data-reveal style="--reveal-delay:0ms">
+          <span class="project__idx">P.01</span>
+          <h3>İTÜ Ayazağa 3B Şehir Modeli</h3>
+          <p>İTÜ Ayazağa Yerleşkesi'nin LoD1 seviyesinde 3B şehir modelinin oluşturulması ve web ortamında sunulması.</p>
+          <div class="project__tags"><span>Fotogrametri</span><span>3B Modelleme</span><span>Web GIS</span></div>
+          <a class="project__link" href="https://sites.google.com/view/itu3dkampusmodeliekip5/ana-sayfa" target="_blank" rel="noopener">
+            Projeyi Aç
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="project" data-reveal style="--reveal-delay:80ms">
+          <span class="project__idx">P.02</span>
+          <h3>Optik &amp; SAR ile Deformasyon Belirleme</h3>
+          <p>Optik ve SAR uzaktan algılama verilerinin birlikte kullanılmasıyla yüzey deformasyonunun belirlenmesi.</p>
+          <div class="project__tags"><span>Uzaktan Algılama</span><span>InSAR</span><span>StaMPS</span></div>
+          <span class="project__link project__link--muted">Detay için iletişim</span>
+        </article>
+
+        <article class="project" data-reveal style="--reveal-delay:160ms">
+          <span class="project__idx">P.03</span>
+          <h3>Geomatik Projesi — Temel Ölçme</h3>
+          <p>Temel ölçme ve hesabı; GPS/GNSS teknikleri ile yersel yöntemler kullanılarak detay ölçmeleri.</p>
+          <div class="project__tags"><span>GNSS</span><span>Yersel Ölçme</span><span>Jeodezi</span></div>
+          <span class="project__link project__link--muted">Detay için iletişim</span>
+        </article>
+
+        <article class="project" data-reveal style="--reveal-delay:240ms">
+          <span class="project__idx">P.04</span>
+          <h3>Geomatik Projesi — İleri Analiz</h3>
+          <p>Jeodezik, fotogrametrik ve uzaktan algılama yöntemlerinin bir arada uygulandığı kapsamlı proje çalışması.</p>
+          <div class="project__tags"><span>Jeodezi</span><span>Fotogrametri</span><span>UA</span></div>
+          <span class="project__link project__link--muted">Detay için iletişim</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BAŞARILAR & ORGANİZASYONLAR ================= -->
+  <section class="section" id="basarilar">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 05</span><span class="rule"></span> BAŞARILAR</span>
+        <h2 class="section__title">Dereceler, yayınlar ve üyelikler.</h2>
+      </div>
+
+      <div class="awards">
+        <div class="award" data-reveal>
+          <span class="award__rank">2025</span>
+          <div class="award__body">
+            <h3>TÜFUAB 2025 — Ulusal Bildiri</h3>
+            <p>Türkiye Ulusal Fotogrametri ve Uzaktan Algılama Birliği sempozyumunda sunulan bildiri.</p>
+          </div>
+          <span class="award__badge" aria-hidden="true">📄</span>
+        </div>
+
+        <div class="award" data-reveal style="--reveal-delay:80ms">
+          <span class="award__rank">2.'LİK</span>
+          <div class="award__body">
+            <h3>İTÜ Geomatik Mühendisliği Bölüm İkinciliği</h3>
+            <p>252. yıl mezuniyet döneminde 3.58 / 4.00 ortalama ile bölüm derecesi.</p>
+          </div>
+          <span class="award__badge" aria-hidden="true">🥈</span>
+        </div>
+
+        <div class="award" data-reveal style="--reveal-delay:160ms">
+          <span class="award__rank">3.'LÜK</span>
+          <div class="award__body">
+            <h3>CBS Projeleri Üçüncülüğü</h3>
+            <p>Coğrafi Bilgi Sistemleri proje yarışması derecesi.</p>
+          </div>
+          <span class="award__badge" aria-hidden="true">🥉</span>
+        </div>
+      </div>
+
+      <!-- Organizasyonlar -->
+      <div class="orgs" data-reveal style="--reveal-delay:120ms">
+        <h3 class="cv__label">ÜYELİKLER &amp; ORGANİZASYONLAR</h3>
+        <div class="orgs__grid">
+          <div class="org">
+            <h4>İTÜ Jeodezi ve Fotogrametri Kulübü</h4>
+            <p>Yönetim Kurulu Üyesi · Teknik Gezi · 2023–2024</p>
+          </div>
+          <div class="org">
+            <h4>ISPRS</h4>
+            <p>International Society for Photogrammetry and Remote Sensing</p>
+          </div>
+          <div class="org">
+            <h4>IAG</h4>
+            <p>International Association of Geodesy</p>
+          </div>
+          <div class="org">
+            <h4>TMMOB HKMO</h4>
+            <p>Harita ve Kadastro Mühendisleri Odası</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= İLETİŞİM ================= -->
+  <section class="section section--panel" id="iletisim">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="idx">§ 06</span><span class="rule"></span> İLETİŞİM</span>
+      </div>
+
+      <div class="contact__grid">
+        <div data-reveal="left">
+          <p class="contact__lead">Bir proje, iş birliği ya da fikir — konuşmaya açığım.</p>
+
+          <a class="contact__mail" href="mailto:salihtatci@gmail.com">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            salihtatci@gmail.com
+          </a>
+
+          <div class="contact__socials">
+            <a href="https://www.linkedin.com/in/salih-tatc%C4%B1-940994207/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.75 1.86-2.75 3.78V24h-4V8Z"/></svg>
+            </a>
+            <a href="https://github.com/salihtatci" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7 0-.7 0-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/salihtatci/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://x.com/TatciSalih" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-7-6.2 7H1.7l8.1-9.3L1 2h7l4.9 6.5L18.9 2Zm-2.4 18h1.9L7.6 4H5.6l10.9 16Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- koordinat kartı: İTÜ Ayazağa — canlı uydu görüntüsü -->
+        <div class="geocard" data-reveal="right" style="--reveal-delay:120ms">
+          <div class="geocard__map">
+            <iframe
+              class="geocard__frame"
+              src="https://maps.google.com/maps?q=41.104692,29.019366&t=k&z=16&output=embed"
+              title="İTÜ Ayazağa Kampüsü — uydu görüntüsü"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+            <span class="geocard__reticle" aria-hidden="true"></span>
+          </div>
+          <div class="geocard__foot">
+            <span>41.1047°N&nbsp;&nbsp;29.0194°E</span>
+            <a href="https://www.google.com/maps/@41.104692,29.019366,16z/data=!3m1!1e3" target="_blank" rel="noopener">Büyük haritada aç ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__brand">Salih Tatcı</span>
+        <span class="footer__meta">© 2025 · Geomatik ve Elektrik Mühendisi · İstanbul</span>
+        <a class="footer__top" href="#hero">
+          BAŞA DÖN
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V3M5 10l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
